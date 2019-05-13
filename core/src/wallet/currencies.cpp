@@ -180,6 +180,15 @@ namespace ledger {
                             .unit("satoshi", 0, "satoshi")
                             .unit("dogecoin", 8, "DOGE")
                             .unit("milli-dogecoin", 5, "mDOGE");
+							
+			const api::Currency VERGE =
+                    Currency("verge")
+                            .forkOfBitcoin(networks::getNetworkParameters("verge"))
+                            .bip44(77)
+                            .paymentUri("verge")
+                            .unit("satoshi", 0, "satoshi")
+                            .unit("verge", 8, "XVG")
+                            .unit("milli-verge", 5, "mXVG");
 
             const api::Currency STRATIS =
                     Currency("stratis")

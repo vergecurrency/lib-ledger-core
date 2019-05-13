@@ -304,6 +304,21 @@ namespace ledger {
                             {}
                     );
                     return DOGECOIN;
+				} else if (networkName == "verge") {
+                    static const api::BitcoinLikeNetworkParameters VERGE(
+                            "xvg",
+                            {0x1E}, // 30
+                            {0x21}, // 33
+                            {0x02, 0x2D, 0x25, 0x33},
+                            api::BitcoinLikeFeePolicy::PER_BYTE,
+                            10000,
+                            "Verge Signed Message:\n",
+                            false,
+                            0,
+                            {sigHashType::SIGHASH_ALL},
+                            {}
+                    );
+                    return VERGE;
                 } else if (networkName == "stratis") {
                     static const api::BitcoinLikeNetworkParameters STRATIS(
                             "strat",
